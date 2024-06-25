@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100dvw;
+    height: 100dvh;
+    background-color: #000;
+}
+
+.wrapper {
+    padding: 2px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.wrapper .row {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+}
+
+.wrapper .row .col {
+    width: 10%;
+    height: 100%;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+.wrapper .row .col:nth-child(n+1):hover {
+    box-shadow: 4px 4px 10px blue inset, -4px -4px 10px blue inset;
+}
+
+.wrapper .row .col:nth-child(2n+1):hover {
+    box-shadow: 4px 4px 10px red inset, -4px -4px 10px red inset;
+}
+
+.wrapper .row .col:nth-child(3n+1):hover {
+    box-shadow: 4px 4px 10px white inset, -4px -4px 10px white inset;
+}
+
+.wrapper .row .col:nth-child(4n+1):hover {
+    box-shadow: 4px 4px 10px green inset, -4px -4px 10px green inset;
+}
+
+.wrapper .row .col:nth-child(5n+1):hover {
+    box-shadow: 4px 4px 10px yellow inset, -4px -4px 10px yellow inset;
+}
+
+@keyframes blinker {
+    0% {
+        box-shadow: 1px 1px 10px blue inset, -1px -1px 10px blue inset;
+    }
+
+    25% {
+        box-shadow: 2px 2px 30px red inset, -2px -2px 30px red inset;
+    }
+
+    50% {
+        box-shadow: 3px 3px 10px yellow inset, -3px -3px 10px yellow inset;
+    }
+
+    75% {
+        box-shadow: 4px 4px 40px green inset, -4px -4px 40px green inset;
+    }
+
+    100% {
+        box-shadow: 5px 5px 10px white inset, -5px -5px 10px white inset;
+    }
+}
